@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+    integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Catalina Chat</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Hugo Orlando</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="http://www.linkedin.com/in/orlandogonz" target="_blank">Linkedin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://www.github.com/orlandogonz" target="_blank">GitHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/company/comunidad-it/" target="_blank">ComIT</a>
+            </li>
+        </ul>
+        <span class="navbar-text">NodeJs & Express</span>
+      </div>
+    </nav>
+
+    <div class="card col-md-4 mt-5 mx-auto" id="nickWrap">
+      <div class="card-header">
+        <h3>Nickname</h3>
+      </div>
+      <p id="nickError"></p>
+      <div class="card-body">
+        <form id="nickForm">
+          <input type="text" placeholder="Ingresa tu Nickname" id="nickname" class="form-control">
+          <button type="submit" class="btn btn-warning btn-block mt-2">
+            <i class="fas fa-location-arrow"></i>Enviar
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container" id="contentWrap">
+      <div class="row">
+        <div class="col-md-6 offset-md-1 mt-4">
+          <div class="card">
+            <div class="card-header">
+              <h4>¡Disfruta hablando!</h4>
+            </div>
+            <div id="chat" class="card-body"></div><!--Recibira codigo Js de web sockets-->
+            <form id="message-form" class="card-footer">
+              <div class="input-group">
+                <input type="text" id="message" class="form-control">
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-warning mt-2">
+                    <i class="fas fa-location-arrow"></i>Enviar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="card col-md-3">
+          <div class="card-header">
+            <h3>Usuarios</h3>
+          </div>
+          <div class="card-body">
+            <div id="usernames"></div><!--Usuarios conectados. Codigo desde Js-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
