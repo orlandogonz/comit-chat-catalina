@@ -2,6 +2,8 @@
 Catalina Chat es un projecto realizado para Comunidad IT hecho en NodeJs y Express. 
 
 Alumno: Hugo Orlando Gonzalez -- orlandogonz.dev@gmail.com -- https://www.linkedin.com/in/orlandogonz
+
+
 Profesor: Ricardo Segretin -- https://www.github.com/rsegretin --
 
 
